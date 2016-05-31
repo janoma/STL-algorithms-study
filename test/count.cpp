@@ -35,7 +35,7 @@ BOOST_AUTO_TEST_CASE( empty_container_count_if )
 
 BOOST_AUTO_TEST_CASE( count_zero )
 {
-    positive_area_rects_fixture f;
+    const positive_area_rects_fixture f;
 
     BOOST_CHECK_EQUAL(std::count(std::begin(f.rects), std::end(f.rects), rectangle{1, 2, 3, 4}), 0);
     BOOST_CHECK_EQUAL(std::count(std::begin(f.rects), std::end(f.rects), rectangle{0, 0, 0, 0}), 0);
@@ -44,7 +44,7 @@ BOOST_AUTO_TEST_CASE( count_zero )
 
 BOOST_AUTO_TEST_CASE( count_one )
 {
-    positive_area_rects_fixture f;
+    const positive_area_rects_fixture f;
 
     BOOST_CHECK_EQUAL(std::count(std::begin(f.rects), std::end(f.rects), rectangle{10, 0, 50, 10}), 1);
     BOOST_CHECK_EQUAL(std::count(std::begin(f.rects), std::end(f.rects), rectangle{20, 30, 50, 40}), 1);
@@ -53,7 +53,7 @@ BOOST_AUTO_TEST_CASE( count_one )
 
 BOOST_AUTO_TEST_CASE( count_many )
 {
-    positive_area_rects_fixture f;
+    const positive_area_rects_fixture f;
 
     BOOST_CHECK_EQUAL(std::count(std::begin(f.rects), std::end(f.rects), rectangle{0, 0, 1, 1}), 4);
 }
