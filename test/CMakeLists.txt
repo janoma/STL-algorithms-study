@@ -5,7 +5,9 @@ add_definitions(-Wall -Werror -Wextra -std=c++11)
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
-include_directories(${Boost_INCLUDE_DIRS})
+set(INCLUDE_DIR ../include)
+
+include_directories(${Boost_INCLUDE_DIRS} ${INCLUDE_DIR})
 
 add_executable(test_all_of all_of.cpp)
 add_executable(test_count count.cpp)

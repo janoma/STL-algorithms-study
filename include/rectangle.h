@@ -1,6 +1,5 @@
 //
 // This header is a helper with a small structure to be used in the unit tests.
-// Collections and queries will be based on this.
 //
 
 #ifndef __RECTANGLE_H_

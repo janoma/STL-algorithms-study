@@ -1,3 +1,7 @@
+//
+// Operators useful for some specific unit tests.
+//
+
 #ifndef __OPERATORS_H_
 #define __OPERATORS_H_
 

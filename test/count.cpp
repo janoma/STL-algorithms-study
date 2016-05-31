@@ -6,8 +6,8 @@
 #include <algorithm>
 #include <vector>
 
-#include "operators.h"
-#include "rectangle.h"
+#include <operators.h>
+#include <rectangle.h>
 
 using rectangle = rectangle_t<int>;
 
