@@ -1,4 +1,4 @@
-# Study of STL's <algorithm> header
+# Study of STL's <algorithm> header [![Build Status](https://travis-ci.org/janoma/STL-algorithms-study.svg?branch=master)](https://travis-ci.org/janoma/STL-algorithms-study)
 To the point: examples to study the algorithms in `C++`'s `<algorithm>` header.
 
 ## Installation
