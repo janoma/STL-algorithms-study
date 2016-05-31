@@ -27,6 +27,19 @@ struct true_no_op
 };
 
 /*!
+ * \brief Function object that always returns false.
+ */
+struct false_no_op
+{
+    template <typename T>
+    inline bool
+    operator()(T const&) const
+    {
+        return false;
+    }
+};
+
+/*!
  * \brief Function object that alternates the return value between true and
  * false, ignoring the argument.
  */
@@ -42,19 +55,5 @@ struct alternating_no_op
     /*! Needs to be mutable, as the operator() needs to be const. */
     mutable int number;
 };
-
-/*!
- * \brief Function object that always returns false.
- */
-struct false_no_op
-{
-    template <typename T>
-    inline bool
-    operator()(T const&) const
-    {
-        return false;
-    }
-};
-
 
 #endif /* __OPERATORS_H_ */
