@@ -1,9 +1,14 @@
 # Study of STL's `<algorithm>` header [![Build Status](https://travis-ci.org/janoma/STL-algorithms-study.svg?branch=master)](https://travis-ci.org/janoma/STL-algorithms-study)
-To the point: examples to study the algorithms in `C++`'s `<algorithm>` header.
+To the point: examples to study the functionality provided by the `<algorithm>`
+header in C++.
 
-Current completion status: 6% :grin: (5/83, see tables below).
+Current completion status: 6% :grin: (5/83, see tables below).  __Pull requests are
+welcome!__
 
-## Installation
+## Cloning/running
+Although many functions came before C++11, I'm using it for the tests. That would be
+the only requirement, along with
+[Boost.Test](http://www.boost.org/doc/libs/1_60_0/libs/test/doc/html/index.html).
 ```
 $ git clone https://github.com/janoma/stl-algorithm-study.git
 $ cd stl-algorithm-study
