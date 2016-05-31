@@ -14,11 +14,11 @@ $ make test
 The following list maps function names to the `.cpp` file in which they are
 tested.
 
-| Function name              | Test file |
-| -------------              | --------- |
-| `all_of`                   | [all_of.cpp](test/all_of.cpp) |
-| `any_of`                   | [all_of.cpp](test/all_of.cpp) |
-| `none_of`                  | [all_of.cpp](test/all_of.cpp) |
+| Function name | Test file |
+| ------------- | --------- |
+| [`all_of`](https://devdocs.io/cpp/algorithm/all_any_none_of) | [all_of.cpp](test/all_of.cpp) |
+| [`any_of`](https://devdocs.io/cpp/algorithm/all_any_none_of) | [all_of.cpp](test/all_of.cpp) |
+| [`none_of`](https://devdocs.io/cpp/algorithm/all_any_none_of) | [all_of.cpp](test/all_of.cpp) |
 
 ## License
 MIT License.
