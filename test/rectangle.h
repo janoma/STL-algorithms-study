@@ -65,7 +65,8 @@ has_area(rectangle_t<coord> const& rect)
 }
 
 /*!
- * Fixture for Boost.Test with a variety of rectangles.
+ * Fixture for Boost.Test with a variety of rectangles, including invalid
+ * rectangles.
  */
 struct rects_variety_fixture
 {
@@ -88,5 +89,53 @@ struct rects_variety_fixture
     std::vector<rectangle> rects;
 };
 
+/*!
+ * Fixture for Boost.Test containing only valid rectangles, some of them with
+ * zero area.
+ */
+struct valid_rects_fixture
+{
+    using coord = int;
+    using rectangle = rectangle_t<coord>;
+
+    valid_rects_fixture()
+    {
+        rects.push_back(rectangle{0, 0, 20, 5}); /*! valid, area 100 */
+        rects.push_back(rectangle{10, 0, 50, 10}); /* valid, area 400 */
+        rects.push_back(rectangle{20, 30, 50, 40}); /* valid, area 300 */
+        rects.push_back(rectangle{50, 0, 70, 20}); /*! valid, area 400 */
+        rects.push_back(rectangle{50, 0, 50, 20}); /*! valid, area 0 */
+        rects.push_back(rectangle{50, 0, 70, 0}); /*! valid, area 0 */
+        rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
+        rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
+        rects.push_back(rectangle{0, 0, 2, 10}); /*! valid, area 20 */
+    }
+
+    std::vector<rectangle> rects;
+};
+
+/*!
+ * Fixture for Boost.Test containing only valid rectangles with positive area.
+ */
+struct positive_area_rects_fixture
+{
+    using coord = int;
+    using rectangle = rectangle_t<coord>;
+
+    positive_area_rects_fixture()
+    {
+        rects.push_back(rectangle{0, 0, 20, 5}); /*! valid, area 100 */
+        rects.push_back(rectangle{10, 0, 50, 10}); /* valid, area 400 */
+        rects.push_back(rectangle{20, 30, 50, 40}); /* valid, area 300 */
+        rects.push_back(rectangle{50, 0, 70, 20}); /*! valid, area 400 */
+        rects.push_back(rectangle{50, 0, 55, 20}); /*! valid, area 100 */
+        rects.push_back(rectangle{50, 0, 70, 5}); /*! valid, area 100 */
+        rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
+        rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
+        rects.push_back(rectangle{0, 0, 2, 10}); /*! valid, area 20 */
+    }
+
+    std::vector<rectangle> rects;
+};
 
 #endif /* __RECTANGLE_H_ */

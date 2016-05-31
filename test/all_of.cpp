@@ -74,4 +74,35 @@ BOOST_AUTO_TEST_CASE( no_op_none_of )
     BOOST_CHECK(not std::none_of(std::begin(f.rects), std::end(f.rects), alternating_no_op()));
 }
 
+BOOST_AUTO_TEST_CASE( is_valid_checks )
+{
+    const rects_variety_fixture f;
+
+    BOOST_CHECK(not std::all_of(std::begin(f.rects), std::end(f.rects), is_valid<rects_variety_fixture::coord>));
+    BOOST_CHECK(std::any_of(std::begin(f.rects), std::end(f.rects), is_valid<rects_variety_fixture::coord>));
+    BOOST_CHECK(not std::none_of(std::begin(f.rects), std::end(f.rects), is_valid<rects_variety_fixture::coord>));
+}
+
+BOOST_AUTO_TEST_CASE( has_area_valid_rects_fixture )
+{
+    const valid_rects_fixture f;
+
+    BOOST_REQUIRE(std::all_of(std::begin(f.rects), std::end(f.rects), is_valid<rects_variety_fixture::coord>));
+
+    BOOST_CHECK(not std::all_of(std::begin(f.rects), std::end(f.rects), has_area<rects_variety_fixture::coord>));
+    BOOST_CHECK(std::any_of(std::begin(f.rects), std::end(f.rects), has_area<rects_variety_fixture::coord>));
+    BOOST_CHECK(not std::none_of(std::begin(f.rects), std::end(f.rects), has_area<rects_variety_fixture::coord>));
+}
+
+BOOST_AUTO_TEST_CASE( has_area_positive_area_rects_fixture )
+{
+    const positive_area_rects_fixture f;
+
+    BOOST_REQUIRE(std::all_of(std::begin(f.rects), std::end(f.rects), is_valid<rects_variety_fixture::coord>));
+
+    BOOST_CHECK(std::all_of(std::begin(f.rects), std::end(f.rects), has_area<rects_variety_fixture::coord>));
+    BOOST_CHECK(std::any_of(std::begin(f.rects), std::end(f.rects), has_area<rects_variety_fixture::coord>));
+    BOOST_CHECK(not std::none_of(std::begin(f.rects), std::end(f.rects), has_area<rects_variety_fixture::coord>));
+}
+
 BOOST_AUTO_TEST_SUITE_END( /* all_of_test_suite */ )
