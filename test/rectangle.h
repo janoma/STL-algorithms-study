@@ -30,7 +30,7 @@ template <typename coord>
 inline bool
 is_valid(rectangle_t<coord> const& rect)
 {
-    return std::less_equal<coord>(rect.left, rect.right) and std::less_equal<coord>(rect.right, rect.top);
+    return std::less_equal<coord>()(rect.left, rect.right) and std::less_equal<coord>()(rect.right, rect.top);
 }
 
 /*!
@@ -48,7 +48,7 @@ inline coord
 area(rectangle_t<coord> const& rect)
 {
     assert(is_valid(rect));
-    return std::multiplies<coord>(std::minus<coord>(rect.right, rect.left), std::minus<coord>(rect.top, rect.bottom));
+    return std::multiplies<coord>()(std::minus<coord>()(rect.right, rect.left), std::minus<coord>()(rect.top, rect.bottom));
 }
 
 /*!
@@ -61,7 +61,7 @@ inline bool
 has_area(rectangle_t<coord> const& rect)
 {
     /*! Alternative implementation: return area(rect) > 0 */
-    return std::less<coord>(rect.left, rect.right) and std::less<coord>(rect.right, rect.top);
+    return std::less<coord>()(rect.left, rect.right) and std::less<coord>()(rect.right, rect.top);
 }
 
 /*!
