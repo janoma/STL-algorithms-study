@@ -74,4 +74,4 @@ BOOST_AUTO_TEST_CASE( no_op_none_of )
     BOOST_CHECK(not std::none_of(std::begin(f.rects), std::end(f.rects), alternating_no_op()));
 }
 
-BOOST_AUTO_TEST_SUITE_END( /* STL_Algorithm_all_of_Test_Suite */ )
+BOOST_AUTO_TEST_SUITE_END( /* all_of_test_suite */ )
