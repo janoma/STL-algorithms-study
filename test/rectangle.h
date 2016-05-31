@@ -8,6 +8,7 @@
 
 #include <cassert>
 #include <functional>
+#include <vector>
 
 template <typename coord>
 struct rectangle_t
@@ -62,5 +63,30 @@ has_area(rectangle_t<coord> const& rect)
     /*! Alternative implementation: return area(rect) > 0 */
     return std::less<coord>(rect.left, rect.right) and std::less<coord>(rect.right, rect.top);
 }
+
+/*!
+ * Fixture for Boost.Test with a variety of rectangles.
+ */
+struct rects_variety_fixture
+{
+    using coord = int;
+    using rectangle = rectangle_t<coord>;
+
+    rects_variety_fixture()
+    {
+        rects.push_back(rectangle{0, 0, 20, 5}); /*! valid, area 100 */
+        rects.push_back(rectangle{10, 0, 50, 10}); /* valid, area 400 */
+        rects.push_back(rectangle{20, 30, 50, 40}); /* valid, area 300 */
+        rects.push_back(rectangle{50, 0, 20, 20}); /*! invalid */
+        rects.push_back(rectangle{50, 0, 50, 20}); /*! valid, area 0 */
+        rects.push_back(rectangle{50, 0, 70, 0}); /*! valid, area 0 */
+        rects.push_back(rectangle{0, 0, -1, -1}); /*! invalid */
+        rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
+        rects.push_back(rectangle{0, 0, 2, 10}); /*! valid, area 20 */
+    }
+
+    std::vector<rectangle> rects;
+};
+
 
 #endif /* __RECTANGLE_H_ */

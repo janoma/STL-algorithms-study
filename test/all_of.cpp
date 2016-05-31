@@ -11,24 +11,6 @@
 
 using rectangle = rectangle_t<int>;
 
-struct rects_fixture
-{
-    rects_fixture()
-    {
-        rects.push_back(rectangle{0, 0, 20, 5}); /*! valid, area 100 */
-        rects.push_back(rectangle{10, 0, 50, 10}); /* valid, area 400 */
-        rects.push_back(rectangle{20, 30, 50, 40}); /* valid, area 300 */
-        rects.push_back(rectangle{50, 0, 20, 20}); /*! invalid */
-        rects.push_back(rectangle{50, 0, 50, 20}); /*! valid, area 0 */
-        rects.push_back(rectangle{50, 0, 70, 0}); /*! valid, area 0 */
-        rects.push_back(rectangle{0, 0, -1, -1}); /*! invalid */
-        rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
-        rects.push_back(rectangle{0, 0, 2, 10}); /*! valid, area 20 */
-    }
-
-    std::vector<rectangle> rects;
-};
-
 BOOST_AUTO_TEST_SUITE( all_of_test_suite )
 
 BOOST_AUTO_TEST_CASE( empty_container_all_of )
@@ -65,7 +47,7 @@ BOOST_AUTO_TEST_CASE( empty_container_none_of )
 
 BOOST_AUTO_TEST_CASE( no_op_all_of )
 {
-    const rects_fixture f;
+    const rects_variety_fixture f;
 
     BOOST_CHECK(std::all_of(std::begin(f.rects), std::end(f.rects), true_no_op()));
     BOOST_CHECK(not std::all_of(std::begin(f.rects), std::end(f.rects), false_no_op()));
@@ -74,7 +56,7 @@ BOOST_AUTO_TEST_CASE( no_op_all_of )
 
 BOOST_AUTO_TEST_CASE( no_op_any_of )
 {
-    const rects_fixture f;
+    const rects_variety_fixture f;
 
     BOOST_CHECK(std::any_of(std::begin(f.rects), std::end(f.rects), true_no_op()));
     BOOST_CHECK(not std::any_of(std::begin(f.rects), std::end(f.rects), false_no_op()));
@@ -85,7 +67,7 @@ BOOST_AUTO_TEST_CASE( no_op_any_of )
 
 BOOST_AUTO_TEST_CASE( no_op_none_of )
 {
-    const rects_fixture f;
+    const rects_variety_fixture f;
 
     BOOST_CHECK(not std::none_of(std::begin(f.rects), std::end(f.rects), true_no_op()));
     BOOST_CHECK(std::none_of(std::begin(f.rects), std::end(f.rects), false_no_op()));
