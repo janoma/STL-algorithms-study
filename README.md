@@ -2,7 +2,7 @@
 To the point: examples to study the algorithms in `C++`'s `<algorithm>` header.
 
 ## Installation
-```bash
+```
 $ git clone https://github.com/janoma/stl-algorithm-study.git
 $ cd stl-algorithm-study
 $ cmake .
@@ -12,7 +12,7 @@ $ make test
 
 ## Index
 The following list maps function names to the `.cpp` file in which they are
-tested.
+tested. Function names are linked to their entry in [devdocs.io](https://devdocs.io).
 
 | Function name | Test file |
 | ------------- | --------- |
