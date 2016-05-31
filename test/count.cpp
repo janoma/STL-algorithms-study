@@ -58,4 +58,29 @@ BOOST_AUTO_TEST_CASE( count_many )
     BOOST_CHECK_EQUAL(std::count(std::begin(f.rects), std::end(f.rects), rectangle{0, 0, 1, 1}), 4);
 }
 
+BOOST_AUTO_TEST_CASE( count_if_zero )
+{
+    const positive_area_rects_fixture f;
+
+    BOOST_CHECK_EQUAL(std::count_if(std::begin(f.rects), std::end(f.rects), [](rectangle const& r){ return not is_valid(r); }), 0);
+    BOOST_CHECK_EQUAL(std::count_if(std::begin(f.rects), std::end(f.rects), [](rectangle const& r){ return area(r) == 0; }), 0);
+}
+
+BOOST_AUTO_TEST_CASE( count_if_one )
+{
+    const valid_rects_fixture f;
+
+    BOOST_CHECK_EQUAL(std::count_if(std::begin(f.rects), std::end(f.rects), [](rectangle const& r){ return area(r) == 100; }), 1);
+    BOOST_CHECK_EQUAL(std::count_if(std::begin(f.rects), std::end(f.rects), [](rectangle const& r){ return area(r) == 300; }), 1);
+}
+
+BOOST_AUTO_TEST_CASE( count_if_many )
+{
+    const valid_rects_fixture f;
+
+    BOOST_CHECK_EQUAL(std::count_if(std::begin(f.rects), std::end(f.rects), [](rectangle const& r){ return area(r) == 0; }), 2);
+    BOOST_CHECK_EQUAL(std::count_if(std::begin(f.rects), std::end(f.rects), [](rectangle const& r){ return area(r) == 1; }), 2);
+    BOOST_CHECK_EQUAL(std::count_if(std::begin(f.rects), std::end(f.rects), [](rectangle const& r){ return area(r) > 0; }), 7);
+}
+
 BOOST_AUTO_TEST_SUITE_END( /* count_test_suite */ )
