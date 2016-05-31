@@ -30,7 +30,7 @@ template <typename coord>
 inline bool
 is_valid(rectangle_t<coord> const& rect)
 {
-    return std::less_equal<coord>()(rect.left, rect.right) and std::less_equal<coord>()(rect.right, rect.top);
+    return std::less_equal<coord>()(rect.left, rect.right) and std::less_equal<coord>()(rect.bottom, rect.top);
 }
 
 /*!
