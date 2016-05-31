@@ -61,7 +61,7 @@ inline bool
 has_area(rectangle_t<coord> const& rect)
 {
     /*! Alternative implementation: return area(rect) > 0 */
-    return std::less<coord>()(rect.left, rect.right) and std::less<coord>()(rect.right, rect.top);
+    return std::less<coord>()(rect.left, rect.right) and std::less<coord>()(rect.bottom, rect.top);
 }
 
 /*!
