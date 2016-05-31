@@ -8,4 +8,4 @@ add_subdirectory(test)
 enable_testing()
 
 add_test(NAME all_of COMMAND test_all_of)
-
+add_test(NAME count COMMAND test_count)

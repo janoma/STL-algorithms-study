@@ -19,6 +19,16 @@ struct rectangle_t
     coord top;
 };
 
+template <typename coord>
+inline bool
+operator==(rectangle_t<coord> const& lhs, rectangle_t<coord> const& rhs)
+{
+    return lhs.left == rhs.left and
+        lhs.bottom == rhs.bottom and
+        lhs.right == rhs.right and
+        lhs.top == rhs.top;
+}
+
 /*!
  * \brief Returns true if the rectangle is valid.
  *
@@ -126,6 +136,7 @@ struct positive_area_rects_fixture
     {
         rects.push_back(rectangle{0, 0, 20, 5}); /*! valid, area 100 */
         rects.push_back(rectangle{10, 0, 50, 10}); /* valid, area 400 */
+        rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
         rects.push_back(rectangle{20, 30, 50, 40}); /* valid, area 300 */
         rects.push_back(rectangle{50, 0, 70, 20}); /*! valid, area 400 */
         rects.push_back(rectangle{50, 0, 55, 20}); /*! valid, area 100 */
@@ -133,6 +144,7 @@ struct positive_area_rects_fixture
         rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
         rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
         rects.push_back(rectangle{0, 0, 2, 10}); /*! valid, area 20 */
+        rects.push_back(rectangle{0, 0, 1, 1}); /*! valid, area 1 */
     }
 
     std::vector<rectangle> rects;

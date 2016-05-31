@@ -8,5 +8,7 @@ find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 include_directories(${Boost_INCLUDE_DIRS})
 
 add_executable(test_all_of all_of.cpp)
+add_executable(test_count count.cpp)
 
 target_link_libraries(test_all_of ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
+target_link_libraries(test_count ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})

@@ -11,7 +11,7 @@
 
 using rectangle = rectangle_t<int>;
 
-BOOST_AUTO_TEST_SUITE( all_of_test_suite )
+BOOST_AUTO_TEST_SUITE( all_any_none_of_test_suite )
 
 BOOST_AUTO_TEST_CASE( empty_container_all_of )
 {
