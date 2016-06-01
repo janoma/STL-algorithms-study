@@ -6,7 +6,7 @@ Current completion status: 15.66% :grin: (13/83, see tables below).  __Pull requ
 welcome!__
 
 ## Cloning/running
-Although many functions came before C++11, I'm using it for the tests. That would be
+Although many functions came before it, I'm using C++11 for the tests. That would be
 the only requirement, along with
 [Boost.Test](http://www.boost.org/doc/libs/1_60_0/libs/test/doc/html/index.html).
 ```
