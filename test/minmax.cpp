@@ -1,5 +1,5 @@
 #define BOOST_TEST_DYN_LINK
-#define BOOST_TEST_MAIN all_of any_of none_of tests
+#define BOOST_TEST_MAIN minmax tests
 
 #include <boost/test/unit_test.hpp>
 
