@@ -73,6 +73,16 @@ has_area(rectangle_t<coord> const& rect)
     return std::less<coord>()(rect.left, rect.right) and std::less<coord>()(rect.bottom, rect.top);
 }
 
+template <typename coord>
+struct compare_by_area
+{
+    inline bool
+    operator()(rectangle_t<coord> const& lhs, rectangle_t<coord> const& rhs) const
+    {
+        return std::less<coord>()(area(lhs), area(rhs));
+    }
+};
+
 /*!
  * Fixture for Boost.Test with a variety of rectangles, including invalid
  * rectangles.

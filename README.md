@@ -2,7 +2,7 @@
 To the point: examples to study the functionality provided by the `<algorithm>`
 header in C++.
 
-Current completion status: 6% :grin: (5/83, see tables below).  __Pull requests are
+Current completion status: 13.25% :grin: (11/83, see tables below).  __Pull requests are
 welcome!__
 
 ## Cloning/running
@@ -138,16 +138,16 @@ Completion status: 0%
 | [`sort_heap`](https://devdocs.io/cpp/algorithm/sort_heap) | _pending_ |
 
 ### Minimum/maximum operations
-Completion status: 0%
+Completion status: 60%
 
 | Function name | Test file |
 | ------------- | --------- |
-| [`max`](https://devdocs.io/cpp/algorithm/max) | _pending_ |
-| [`max_element`](https://devdocs.io/cpp/algorithm/max_element) | _pending_ |
-| [`min`](https://devdocs.io/cpp/algorithm/min) | _pending_ |
-| [`min_element`](https://devdocs.io/cpp/algorithm/min_element) | _pending_ |
-| [`minmax`](https://devdocs.io/cpp/algorithm/minmax) (C++11) | _pending_ |
-| [`minmax_element`](https://devdocs.io/cpp/algorithm/minmax_element) (C++11) | _pending_ |
+| [`max`](https://devdocs.io/cpp/algorithm/max) | [minmax.cpp](test/minmax.cpp) |
+| [`max_element`](https://devdocs.io/cpp/algorithm/max_element) | [minmax.cpp](test/minmax.cpp) |
+| [`min`](https://devdocs.io/cpp/algorithm/min) | [minmax.cpp](test/minmax.cpp) |
+| [`min_element`](https://devdocs.io/cpp/algorithm/min_element) | [minmax.cpp](test/minmax.cpp) |
+| [`minmax`](https://devdocs.io/cpp/algorithm/minmax) (C++11) | [minmax.cpp](test/minmax.cpp) |
+| [`minmax_element`](https://devdocs.io/cpp/algorithm/minmax_element) (C++11) | [minmax.cpp](test/minmax.cpp) |
 | [`lexicographical_compare`](https://devdocs.io/cpp/algorithm/lexicographical_compare) | _pending_ |
 | [`is_permutation`](https://devdocs.io/cpp/algorithm/is_permutation) (C++11) | _pending_ |
 | [`next_permutation`](https://devdocs.io/cpp/algorithm/next_permutation) | _pending_ |
