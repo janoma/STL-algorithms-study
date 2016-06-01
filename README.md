@@ -2,7 +2,7 @@
 To the point: examples to study the functionality provided by the `<algorithm>`
 header in C++.
 
-Current completion status: 15.66% :grin: (13/83, see tables below).  __Pull requests are
+Current completion status: 16.86% :grin: (14/83, see tables below).  __Pull requests are
 welcome!__
 
 ## Cloning/running
@@ -22,14 +22,14 @@ The following list maps function names to the `.cpp` file in which they are
 tested. Function names are linked to their entry in [devdocs.io](https://devdocs.io).
 
 ### Non-modifying sequence operations
-Completion status: 31.25%
+Completion status: 37.5%
 
 | Function name | Test file |
 | ------------- | --------- |
 | [`all_of`](https://devdocs.io/cpp/algorithm/all_any_none_of) (C++11) | [all_of.cpp](test/all_of.cpp) |
 | [`any_of`](https://devdocs.io/cpp/algorithm/all_any_none_of) (C++11) | [all_of.cpp](test/all_of.cpp) |
 | [`none_of`](https://devdocs.io/cpp/algorithm/all_any_none_of) (C++11) | [all_of.cpp](test/all_of.cpp) |
-| [`for_each`](https://devdocs.io/cpp/algorithm/for_each) | _pending_ |
+| [`for_each`](https://devdocs.io/cpp/algorithm/for_each) | [for_each.cpp](test/for_each.cpp) |
 | [`count`](https://devdocs.io/cpp/algorithm/count) | [count.cpp](test/count.cpp) |
 | [`count_if`](https://devdocs.io/cpp/algorithm/count) | [count.cpp](test/count.cpp) |
 | [`mismatch`](https://devdocs.io/cpp/algorithm/mismatch) | _pending_ |
