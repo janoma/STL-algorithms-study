@@ -9,4 +9,5 @@ enable_testing()
 
 add_test(NAME all_of COMMAND test_all_of)
 add_test(NAME count COMMAND test_count)
+add_test(NAME is_sorted COMMAND test_is_sorted)
 add_test(NAME minmax COMMAND test_minmax)

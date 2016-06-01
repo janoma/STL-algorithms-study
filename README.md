@@ -2,7 +2,7 @@
 To the point: examples to study the functionality provided by the `<algorithm>`
 header in C++.
 
-Current completion status: 13.25% :grin: (11/83, see tables below).  __Pull requests are
+Current completion status: 15.66% :grin: (13/83, see tables below).  __Pull requests are
 welcome!__
 
 ## Cloning/running
@@ -90,12 +90,12 @@ Completion status: 0%
 | [`partition_point`](https://devdocs.io/cpp/algorithm/partition_point) (C++11) | _pending_ |
 
 ### Sorting operations (on sorted ranges)
-Completion status: 0%
+Completion status: 28.5%
 
 | Function name | Test file |
 | ------------- | --------- |
-| [`is_sorted`](https://devdocs.io/cpp/algorithm/is_sorted) (C++11) | _pending_ |
-| [`is_sorted_until`](https://devdocs.io/cpp/algorithm/is_sorted_until) (C++11) | _pending_ |
+| [`is_sorted`](https://devdocs.io/cpp/algorithm/is_sorted) (C++11) | [is_sorted.cpp](test/is_sorted.cpp) |
+| [`is_sorted_until`](https://devdocs.io/cpp/algorithm/is_sorted_until) (C++11) | [is_sorted.cpp](test/is_sorted.cpp) |
 | [`sort`](https://devdocs.io/cpp/algorithm/sort) | _pending_ |
 | [`partial_sort`](https://devdocs.io/cpp/algorithm/partial_sort) | _pending_ |
 | [`partial_sort_copy`](https://devdocs.io/cpp/algorithm/partial_sort_copy) | _pending_ |
