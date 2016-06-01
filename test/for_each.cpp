@@ -22,6 +22,23 @@ BOOST_AUTO_TEST_CASE( sum_each_number )
     BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(numbers), std::end(numbers), std::begin(expected), std::end(expected));
 }
 
+BOOST_AUTO_TEST_CASE( sum_each_number_twice )
+{
+    std::vector<int> numbers{1, 2, 3};
+
+    /*! As std::for_each returns the function, we can use it as a lambda and
+     * then apply it again, so the numbers will be increased twice. Of course
+     * this particular scenario can also be achieved by adding 2 to each number,
+     * but other uses can include calling the same lambda on different
+     * collections. */
+    std::for_each(std::begin(numbers), std::end(numbers),
+            std::for_each(std::begin(numbers), std::end(numbers), [](int& n){ ++n; })
+    );
+
+    const std::vector<int> expected{3, 4, 5};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(numbers), std::end(numbers), std::begin(expected), std::end(expected));
+}
+
 BOOST_AUTO_TEST_CASE( accumulate_total )
 {
     std::vector<int> numbers;
