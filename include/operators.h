@@ -6,25 +6,25 @@
 #define __OPERATORS_H_
 
 /*!
- * \brief Function object that does nothing.
+ * \brief Generic n-ary function object that does nothing.
  */
 struct no_op
 {
-    template <typename T>
+    template <typename... Args>
     inline void
-    operator()(T const&) const
+    operator()(Args...) const
     {
     }
 };
 
 /*!
- * \brief Function object that always returns true.
+ * \brief Generic n-ary function object that always returns true.
  */
 struct true_no_op
 {
-    template <typename T>
+    template <typename... Args>
     inline bool
-    operator()(T const&) const
+    operator()(Args...) const
     {
         return true;
     }
@@ -35,9 +35,9 @@ struct true_no_op
  */
 struct false_no_op
 {
-    template <typename T>
+    template <typename... Args>
     inline bool
-    operator()(T const&) const
+    operator()(Args...) const
     {
         return false;
     }
@@ -49,9 +49,9 @@ struct false_no_op
  */
 struct alternating_no_op
 {
-    template <typename T>
+    template <typename... Args>
     inline bool
-    operator()(T const&) const
+    operator()(Args...) const
     {
         return number++ % 2 == 0;
     }
