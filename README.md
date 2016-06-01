@@ -2,7 +2,7 @@
 To the point: examples to study the functionality provided by the `<algorithm>`
 header in C++.
 
-Current completion status: 16.86% :grin: (14/83, see tables below).  __Pull requests are
+Current completion status: 18.07% :grin: (15/83, see tables below).  __Pull requests are
 welcome!__
 
 ## Cloning/running
@@ -22,7 +22,7 @@ The following list maps function names to the `.cpp` file in which they are
 tested. Function names are linked to their entry in [devdocs.io](https://devdocs.io).
 
 ### Non-modifying sequence operations
-Completion status: 37.5%
+Completion status: 43.75% (7/16)
 
 | Function name | Test file |
 | ------------- | --------- |
@@ -39,12 +39,12 @@ Completion status: 37.5%
 | [`find_if_not`](https://devdocs.io/cpp/algorithm/find) (C++11) | _pending_ |
 | [`find_end`](https://devdocs.io/cpp/algorithm/find_end) | _pending_ |
 | [`find_first_of`](https://devdocs.io/cpp/algorithm/find_first_of) | _pending_ |
-| [`adjacent_find`](https://devdocs.io/cpp/algorithm/adjacent_find) | _pending_ |
+| [`adjacent_find`](https://devdocs.io/cpp/algorithm/adjacent_find) | [adjacent_find.cpp](test/adjacent_find.cpp) |
 | [`search`](https://devdocs.io/cpp/algorithm/search) | _pending_ |
 | [`search_n`](https://devdocs.io/cpp/algorithm/search_n) | _pending_ |
 
 ### Modifying sequence operations
-Completion status: 0%
+Completion status: 0% (0/29)
 
 | Function name | Test file |
 | ------------- | --------- |
@@ -79,7 +79,7 @@ Completion status: 0%
 | [`unique_copy`](https://devdocs.io/cpp/algorithm/unique_copy) | _pending_ |
 
 ### Partitioning operations
-Completion status: 0%
+Completion status: 0% (0/5)
 
 | Function name | Test file |
 | ------------- | --------- |
@@ -90,7 +90,7 @@ Completion status: 0%
 | [`partition_point`](https://devdocs.io/cpp/algorithm/partition_point) (C++11) | _pending_ |
 
 ### Sorting operations (on sorted ranges)
-Completion status: 28.5%
+Completion status: 28.5% (2/7)
 
 | Function name | Test file |
 | ------------- | --------- |
@@ -103,7 +103,7 @@ Completion status: 28.5%
 | [`nth_element`](https://devdocs.io/cpp/algorithm/nth_element) | _pending_ |
 
 ### Binary search operations (on sorted ranges)
-Completion status: 0%
+Completion status: 0% (0/4)
 
 | Function name | Test file |
 | ------------- | --------- |
@@ -113,7 +113,7 @@ Completion status: 0%
 | [`equal_range`](https://devdocs.io/cpp/algorithm/equal_range) | _pending_ |
 
 ### Set operations (on sorted ranges)
-Completion status: 0%
+Completion status: 0% (0/7)
 
 | Function name | Test file |
 | ------------- | --------- |
@@ -126,7 +126,7 @@ Completion status: 0%
 | [`set_union`](https://devdocs.io/cpp/algorithm/set_union) | _pending_ |
 
 ### Heap operations
-Completion status: 0%
+Completion status: 0% (0/6)
 
 | Function name | Test file |
 | ------------- | --------- |
@@ -138,7 +138,7 @@ Completion status: 0%
 | [`sort_heap`](https://devdocs.io/cpp/algorithm/sort_heap) | _pending_ |
 
 ### Minimum/maximum operations
-Completion status: 60%
+Completion status: 60% (6/10)
 
 | Function name | Test file |
 | ------------- | --------- |

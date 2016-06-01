@@ -73,6 +73,18 @@ has_area(rectangle_t<coord> const& rect)
     return std::less<coord>()(rect.left, rect.right) and std::less<coord>()(rect.bottom, rect.top);
 }
 
+/*!
+ * \brief Returns true if the rectangles have the same area.
+ *
+ * \sa area
+ */
+template <typename coord>
+inline bool
+same_area(rectangle_t<coord> const& lhs, rectangle_t<coord> const& rhs)
+{
+    return std::equal_to<coord>()(area(lhs), area(rhs));
+}
+
 template <typename coord>
 struct compare_by_area
 {

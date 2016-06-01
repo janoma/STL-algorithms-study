@@ -79,6 +79,26 @@ operator<<(std::ostream& out, point_t<coord> const& p)
 }
 
 /*!
+ * \brief Returns true if the points have the same X-coordinate.
+ */
+template <typename coord>
+inline bool
+same_abscissa(point_t<coord> const& lhs, point_t<coord> const& rhs)
+{
+    return std::equal_to<coord>()(lhs.x, rhs.x);
+}
+
+/*!
+ * \brief Returns true if the points have the same Y-coordinate.
+ */
+template <typename coord>
+inline bool
+same_ordinate(point_t<coord> const& lhs, point_t<coord> const& rhs)
+{
+    return std::equal_to<coord>()(lhs.y, rhs.y);
+}
+
+/*!
  * \brief Fixture for Boost.Test with repeated points, etc.
  */
 struct points_variety_fixture
