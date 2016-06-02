@@ -127,4 +127,33 @@ BOOST_AUTO_TEST_CASE( repeated_elements_default_compare )
     BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(output), std::end(output), std::begin(expected), std::end(expected));
 }
 
+BOOST_AUTO_TEST_CASE( different_output_type_default_compare )
+{
+    const std::vector<double> primary{1, 3, 4.6, 5, 6};
+    const std::list<double> secondary{1.1, 2, 3.9, 4.6};
+    std::vector<int> output;
+
+    std::set_intersection(std::begin(primary), std::end(primary), std::begin(secondary), std::end(secondary), std::back_inserter(output));
+
+    const std::vector<int> expected{4};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(output), std::end(output), std::begin(expected), std::end(expected));
+}
+
+BOOST_AUTO_TEST_CASE( different_output_type_custom_compare )
+{
+    const std::vector<double> primary{-1.1, 1, -1, 3, 4.6, 5, 6};
+    const std::list<double> secondary{1.1, -2, 3.9, -4.6};
+    std::vector<int> output;
+
+    auto comp = [](double lhs, double rhs){ return std::less<double>()(std::abs(lhs), std::abs(rhs)); };
+    std::set_intersection(std::begin(primary), std::end(primary), std::begin(secondary), std::end(secondary), std::back_inserter(output), comp);
+
+    /*! Here is the interesting thing: -1.1 will be compared equal to 1.1 and
+     * reported to an output iterator that accepts ints. As the algorithm
+     * reports the element from the first collection, -1.1 will be cast to int,
+     * so the number in the output collection will be negative as well. */
+    const std::vector<int> expected{-1, 4};
+    BOOST_CHECK_EQUAL_COLLECTIONS(std::begin(output), std::end(output), std::begin(expected), std::end(expected));
+}
+
 BOOST_AUTO_TEST_SUITE_END( /* set_intersection_test_suite */ )
