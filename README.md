@@ -2,7 +2,7 @@
 To the point: examples to study the functionality provided by the `<algorithm>`
 header in C++.
 
-Current completion status: 19.27% :grin: (16/83, see tables below).  __Pull requests are
+Current completion status: 24% :grin: (20/83, see tables below).  __Pull requests are
 welcome!__
 
 ## Cloning/running
@@ -113,17 +113,17 @@ Completion status: 0% (0/4)
 | [`equal_range`](https://devdocs.io/cpp/algorithm/equal_range) | _pending_ |
 
 ### Set operations (on sorted ranges)
-Completion status: 0% (0/7)
+Completion status: 57.1% (4/7)
 
 | Function name | Test file |
 | ------------- | --------- |
 | [`merge`](https://devdocs.io/cpp/algorithm/merge) | _pending_ |
 | [`inplace_merge`](https://devdocs.io/cpp/algorithm/inplace_merge) | _pending_ |
 | [`includes`](https://devdocs.io/cpp/algorithm/includes) | _pending_ |
-| [`set_difference`](https://devdocs.io/cpp/algorithm/set_difference) | _pending_ |
-| [`set_intersection`](https://devdocs.io/cpp/algorithm/set_intersection) | _pending_ |
-| [`set_symmetric_difference`](https://devdocs.io/cpp/algorithm/set_symmetric_difference) | _pending_ |
-| [`set_union`](https://devdocs.io/cpp/algorithm/set_union) | _pending_ |
+| [`set_difference`](https://devdocs.io/cpp/algorithm/set_difference) | [set_difference.cpp](test/set_difference.cpp) |
+| [`set_intersection`](https://devdocs.io/cpp/algorithm/set_intersection) | [set_intersection.cpp](test/set_intersection.cpp) |
+| [`set_symmetric_difference`](https://devdocs.io/cpp/algorithm/set_symmetric_difference) | [set_symmetric_difference.cpp](test/set_symmetric_difference.cpp) |
+| [`set_union`](https://devdocs.io/cpp/algorithm/set_union) | [set_union.cpp](test/set_union.cpp) |
 
 ### Heap operations
 Completion status: 0% (0/6)
