@@ -2,7 +2,7 @@
 To the point: examples to study the functionality provided by the `<algorithm>`
 header in C++.
 
-Current completion status: 18.07% :grin: (15/83, see tables below).  __Pull requests are
+Current completion status: 19.27% :grin: (16/83, see tables below).  __Pull requests are
 welcome!__
 
 ## Cloning/running
@@ -22,7 +22,7 @@ The following list maps function names to the `.cpp` file in which they are
 tested. Function names are linked to their entry in [devdocs.io](https://devdocs.io).
 
 ### Non-modifying sequence operations
-Completion status: 43.75% (7/16)
+Completion status: 50% (8/16)
 
 | Function name | Test file |
 | ------------- | --------- |
@@ -33,7 +33,7 @@ Completion status: 43.75% (7/16)
 | [`count`](https://devdocs.io/cpp/algorithm/count) | [count.cpp](test/count.cpp) |
 | [`count_if`](https://devdocs.io/cpp/algorithm/count) | [count.cpp](test/count.cpp) |
 | [`mismatch`](https://devdocs.io/cpp/algorithm/mismatch) | _pending_ |
-| [`equal`](https://devdocs.io/cpp/algorithm/equal) | _pending_ |
+| [`equal`](https://devdocs.io/cpp/algorithm/equal) | [equal.cpp](test/equal.cpp) |
 | [`find`](https://devdocs.io/cpp/algorithm/find) | _pending_ |
 | [`find_if`](https://devdocs.io/cpp/algorithm/find) | _pending_ |
 | [`find_if_not`](https://devdocs.io/cpp/algorithm/find) (C++11) | _pending_ |
