@@ -155,3 +155,5 @@ Completion status: 60% (6/10)
 
 ## License
 MIT License.
+
+[//]: # ( vim: set nofoldenable: )
