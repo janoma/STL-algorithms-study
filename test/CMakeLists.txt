@@ -19,6 +19,7 @@ add_executable(test_adjacent_find adjacent_find.cpp)
 # Modifying sequence operations
 
 # Partitioning operations
+add_executable(test_partition partition.cpp)
 
 # Sorting operations (on sorted ranges)
 add_executable(test_is_sorted is_sorted.cpp)
@@ -46,6 +47,7 @@ target_link_libraries(test_adjacent_find ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
 # Modifying sequence operations
 
 # Partitioning operations
+target_link_libraries(test_partition ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})
 
 # Sorting operations (on sorted ranges)
 target_link_libraries(test_is_sorted ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY})

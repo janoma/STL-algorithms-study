@@ -17,6 +17,7 @@ add_test(NAME adjacent_find COMMAND test_adjacent_find)
 # Modifying sequence operations
 
 # Partitioning operations
+add_test(NAME partition COMMAND test_partition)
 
 # Sorting operations (on sorted ranges)
 add_test(NAME is_sorted COMMAND test_is_sorted)

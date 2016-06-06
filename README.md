@@ -2,8 +2,7 @@
 To the point: examples to study the functionality provided by the `<algorithm>`
 header in C++.
 
-Current completion status: 24% :grin: (20/83, see tables below).  __Pull requests are
-welcome!__
+Current completion status: 27.7% :grin: (23/83, see tables below).
 
 ## Cloning/running
 Although many functions came before it, I'm using C++11 for the tests. That would be
@@ -79,14 +78,14 @@ Completion status: 0% (0/29)
 | [`unique_copy`](https://devdocs.io/cpp/algorithm/unique_copy) | _pending_ |
 
 ### Partitioning operations
-Completion status: 0% (0/5)
+Completion status: 60% (3/5)
 
 | Function name | Test file |
 | ------------- | --------- |
 | [`is_partitioned`](https://devdocs.io/cpp/algorithm/is_partitioned) (C++11) | _pending_ |
-| [`partition`](https://devdocs.io/cpp/algorithm/partition) | _pending_ |
-| [`partition_copy`](https://devdocs.io/cpp/algorithm/partition_copy) (C++11) | _pending_ |
-| [`stable_partition`](https://devdocs.io/cpp/algorithm/stable_partition) | _pending_ |
+| [`partition`](https://devdocs.io/cpp/algorithm/partition) | [partition.cpp](test/partition.cpp) |
+| [`partition_copy`](https://devdocs.io/cpp/algorithm/partition_copy) (C++11) | [partition.cpp](test/partition.cpp) |
+| [`stable_partition`](https://devdocs.io/cpp/algorithm/stable_partition) | [partition.cpp](test/partition.cpp) |
 | [`partition_point`](https://devdocs.io/cpp/algorithm/partition_point) (C++11) | _pending_ |
 
 ### Sorting operations (on sorted ranges)
