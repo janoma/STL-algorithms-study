@@ -38,3 +38,6 @@ Testing/*
 
 " YouCompleteMe
 .ycm_extra_conf.pyc
+
+# vs code
+.vscode
