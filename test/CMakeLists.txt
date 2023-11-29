@@ -4,6 +4,12 @@
 add_definitions(-Wall -Werror -Wextra -std=c++11)
 
 find_package(Boost COMPONENTS unit_test_framework REQUIRED)
+if(Boost_FOUND)
+  include_directories(${Boost_INCLUDE_DIR})
+  message("-- Boost found: ${Boost_VERSION_STRING}")
+else()
+  message(FATAL_ERROR "Boost not found!")
+endif()
 
 set(INCLUDE_DIR ../include)
 
