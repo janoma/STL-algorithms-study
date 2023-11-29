@@ -16,7 +16,7 @@ jobs:
     - name: Download and install Boost
       run: |
           sudo apt-get -y update
-          sudo apt-get -y install libboost-dev
+          sudo apt-get -y install libboost-test-dev
     - name: cmake
       run: cmake .
     - name: make
