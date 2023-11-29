@@ -1,5 +1,4 @@
-# Not really necessary yet, but it might be if target_compile_features are used.
-# cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 3.5)
 
 project(stl_algorithm_tests)
 
